@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Мария</title>
+    <link rel="stylesheet" href="style/style.css">
+    <meta http-equiv="connect-type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript">
+        // Предварительная загрузка изображений 
+          numimg=0 
+          imgslide=new Array() 
+          imgslide[0]=new Image() 
+          imgslide[1]=new Image() 
+          imgslide[2]=new Image() 
+          imgslide[3]=new Image() 
+          imgslide[0].src="gr000.jpg" 
+          imgslide[1].src="gr001.jpg" 
+          imgslide[2].src="gr002.jpg" 
+          imgslide[3].src="gr003.jpg" 
+          //чередование изображений 
+          function demoslides(){
+            document.images[0].src=imgslide[numimg].src 
+            numimg++;
+            if(numimg == 4) numimg=0; 
+            setTimeout("demoslides()", 1500) 
+          } 
+          $(".five li ul").hide();
+$(".five li:has('.submenu')").hover(
+  function(){
+  $(".five li ul").stop().fadeToggle(300);}
+);
+        </script>
+          
+</head>
+<body onload="demoslides()">
+        
+    <div class="box">
+        <div class="smallbox2">
+            <img src="gr000.jpg"alt="" />
+        </div>
+        <div class="smallbox">
+            <nav class="four">
+                <ul class="topmenu">
+                  <li><a href="#">Навыки Маши<i class="fa fa-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li><a href="second/index.html">Кулинар</a></li>
+                      <li><a href="third/index.html">Модель</a></li>
+                      <li><a href="fourth/index.html">Спортсмен</a></li>
+                      <li><a href="fifth/index.html">Вирусолог</a></li>
+                      <li><a href="sixth/index.html">Отличница</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Веселая жизнь<i class="fa fa-angle-down"></i></a>
+                    <ul class="submenu">
+                      <li><a href="sevven/index.html">Хорошее настроение</a></li>
+                      <li><a href="eight/index.html">Маша и ее друзья</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            <div class="name">
+                <h1>Эта страница посвящена Марии Маркевич</h1>
+            </div>
+            <div class="text">
+                <p><i>Иди на дно с улыбкой</i></p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+

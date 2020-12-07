@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Мария</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="connect-type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript">
+        // Предварительная загрузка изображений 
+          numimg=0 
+          imgslide=new Array() 
+          imgslide[0]=new Image() 
+          imgslide[1]=new Image() 
+          imgslide[2]=new Image() 
+          imgslide[3]=new Image() 
+          imgslide[0].src="gr000.jpg" 
+          imgslide[1].src="gr001.jpg" 
+          imgslide[2].src="gr002.jpg"  
+          //чередование изображений 
+          function demoslides(){
+            document.images[0].src=imgslide[numimg].src 
+            numimg++;
+            if(numimg == 3) numimg=0; 
+            setTimeout("demoslides()", 1500) 
+          } 
+          $(".five li ul").hide();
+$(".five li:has('.submenu')").hover(
+  function(){
+  $(".five li ul").stop().fadeToggle(300);}
+);
+        </script>
+          
+</head>
+<body onload="demoslides()">
+        
+    <div class="box">
+        <div class="smallbox2">
+            <img src="gr000.jpg"alt="" />
+        </div>
+        <div class="smallbox">
+            <div class="container">
+                <div class="scrolling">
+                    <h1>Модель Модель Модель Модель Модель Модель Модель Модель</h1>
+                </div>
+                
+            </div>
+                
+                <p>Наша Маша обладает привлекательной и красивой внешностью, поэтому иногда знаменитые белорусские бренды зовут ее на фотосесии в качестве модели. <br>
+                    На фото вы можете увидеть некоторые моменты из модельной жизни Маши. <br>
+                   Через пару лет наша Маша будет на обложках таких изданий, как Vogue, Elle, Glamour.</p>
+                    <form>
+                        <input type="button" value="Назад" onclick="history.back()" />
+                    </form>
+        </div>
+        
+    </div>
+</body>
